@@ -1,6 +1,6 @@
 function [t_out, s_out] = simulation_2d(controlhandle, trajhandle)
 
-video = false;
+video = true;
 
 params = sys_params;
 
@@ -10,7 +10,7 @@ real_time = true;
 %% **************************** FIGURES *****************************
 disp('Initializing figures...')
 if video
-  video_writer = VideoWriter('test_control_2d.avi', 'Uncompressed AVI');
+  video_writer = VideoWriter('line_control_2d.avi');%, 'Uncompressed AVI');
   open(video_writer);
 end
 h_fig = figure;
